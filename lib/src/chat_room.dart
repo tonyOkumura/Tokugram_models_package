@@ -48,8 +48,8 @@ class ChatRoom extends Equatable {
     return {
       'id': id,
       'participants': participants,
-      'lastMessage': lastMessage.toJson(),
-      'unreadCount': unreadCount,
+      'last_message': lastMessage.toJson(),
+      'unread_count': unreadCount,
     };
   }
 

@@ -33,21 +33,21 @@ class Attachment extends Equatable {
   factory Attachment.fromJson(Map<String, dynamic> json) {
     return Attachment(
       id: json['id'] ?? const Uuid().v4(),
-      messageId: json['messageId'] ?? '',
+      messageId: json['message_id'] ?? '',
       type: AttachmentType.values.firstWhere(
         (e) => e.toString().split('.').last == json['type'],
         orElse: () => AttachmentType.image,
       ),
-      attachmentUrl: json['attachmentUrl'] ?? '',
+      attachmentUrl: json['attachment_url'] ?? '',
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
       'id': id,
-      'messageId': messageId,
+      'message_id': messageId,
       'type': type.toString().split('.').last,
-      'attachmentUrl': attachmentUrl,
+      'attachment_url': attachmentUrl,
     };
   }
 

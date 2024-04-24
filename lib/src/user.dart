@@ -54,7 +54,7 @@ class User extends Equatable {
       'username': username,
       'phone': phone,
       'email': email,
-      'avatarUrl': avatarUrl,
+      'avatar_url': avatarUrl,
       'status': status,
     };
   }
